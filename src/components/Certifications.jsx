@@ -4,7 +4,7 @@ import Section from './Section';
 
 export default function Certifications({ certifications }) {
     return (
-        <Section title="Certificações" icon={Cpu}>
+        <Section title="Certificados" icon={Cpu}>
             <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-3">
                 {certifications.map((cert, index) => {
                     const hasProvider = cert.includes(':');
