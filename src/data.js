@@ -10,11 +10,29 @@ export const resumeData = {
         github: "stuartfsi05",
         githubUrl: "github.com/stuartfsi05",
     },
-    summary: `Desenvolvedor Full Stack focado em Arquitetura de Software e Engenharia de Agentes (IA/LLMs).
+    summaries: {
+        general: `Desenvolvedor Full Stack focado em Arquitetura de Software e Engenharia de Agentes (IA/LLMs).
 Transição de carreira estruturada após 4 anos em Logística (Otimização de Processos), aplicando lógica sistêmica no desenvolvimento de automações (RPA).
 Autor do livro técnico 'O Copiloto Inteligente' (2025).
 Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para TTRPG (Clean Architecture) e orquestração de prompts.`,
+
+        fullstack: `Desenvolvedor de Software (ADS) com portfólio prático em React, Python e Mobile (Flutter).
+Foco obsessivo em Clean Architecture, Design Patterns e Código Limpo.
+Transição de carreira vinda da Logística, trazendo forte capacidade de resolução de problemas e visão sistêmica para o desenvolvimento de software.
+Experiência prática com gestão de estado complexo, bancos NoSQL e desenvolvimento orientado a componentes.`,
+
+        automation: `Especialista em Automação de Processos e Inteligência Artificial.
+Unindo 4 anos de experiência em Logística (Otimização de Fluxos) com Engenharia de Agentes e RPA (N8N/Make/Python).
+Autor do livro 'O Copiloto Inteligente' (2025).
+Foco em criar eficiência operacional e "Hyperautomation" através de soluções que integram LLMs, análise de dados e automação de tarefas repetitivas.`,
+
+        qa: `Estudante de ADS buscando atuar em Qualidade de Software (QA/Testes).
+Transição de carreira vinda da Logística, aplicando a mentalidade de "Conferência e Precisão" na identificação e triagem de bugs.
+Conhecimento prático em Automação (Cypress/Python) e Testes de API (Postman).
+Familiaridade com rituais Ágeis, escrita de cenários em Gherkin e documentação técnica de evidências.`
+    },
     skills: {
+        qa_core: ["Cypress (Básico)", "Testes de API (Postman)", "Gherkin / BDD", "Triagem de Bugs & Jira"],
         ai_rpa: ["Engenharia de Agentes", "Google Gemini & LLMs", "RPA (N8N & Make)", "Engenharia de Prompt"],
         tech_core: ["Python (Pandas & AI)", "React / TypeScript", "Flutter (Mobile)", "Arquitetura & Lógica"],
         ferramentas: ["VS Code / Cursor", "Windsurf IDE", "Git / GitHub Flow", "NoSQL (Hive) & SQL"]
@@ -35,6 +53,7 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
     ],
     projects: [
         {
+            id: "tiss",
             title: "TISS Guard",
             tech: ["React (Vite 5)", "TypeScript", "Chrome Extension (CRXJS)", "RPA"],
             date: "Dez 2025",
@@ -43,9 +62,28 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
                 "Engenharia Reversa: Intercepta o evento de upload do navegador para validar arquivos XML TISS em milissegundos antes do envio.",
                 "RPA (Robotic Process Automation): Implementei um 'Autômato' que assume o controle do DOM para preencher formulários complexos automaticamente.",
                 "Segurança: Sistema de licenciamento criptográfico utilizando a biblioteca 'jose' (ECDSA P-256) com validação offline."
-            ]
+            ],
+            modes: {
+                qa: {
+                    description: "Plataforma de validação de dados médicos focada na prevenção de glosas (tabelas de erros) antes do envio.",
+                    points: [
+                        "Testes Automatizados de Regra de Negócio: O sistema valida XMLs contra 50+ regras da ANS em tempo real, prevenindo erros humanos.",
+                        "Garantia de Qualidade: Redução de 90% no retrabalho operacional ao interceptar falhas na origem (upload).",
+                        "Trindade de Validação: Implementação de logs detalhados para cada transação enviada aos convênios."
+                    ]
+                },
+                fullstack: {
+                    description: "SaaS completo (Extension + Dashboard) construído com React, atuando como middleware no navegador.",
+                    points: [
+                        "Frontend Complexo: Manipulação direta do DOM alheio (Content Scripts) usando React Portals para injetar UI moderna em sistemas legados.",
+                        "Performance: Parsing de arquivos XML de 10MB+ no client-side em <200ms usando Web Workers.",
+                        "Build System: Configuração customizada do Vite para gerar múltiplos bundles (popup, background, content)."
+                    ]
+                }
+            }
         },
         {
+            id: "combat",
             title: "D&D Combat Tracker",
             tech: ["Flutter", "Riverpod", "Hive (NoSQL)", "Clean Architecture"],
             date: "Nov 2025",
@@ -54,9 +92,28 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
                 "Arquitetura: Adotei Clean Architecture com Riverpod para injeção de dependência e gerenciamento de estado reativo.",
                 "Offline-First: Persistência de dados ultra-rápida com Hive (banco NoSQL key-value) garantindo zero latência.",
                 "Lógica de Jogo: Implementei sistemas de 'HP Temporário' e condições de status com regras de negócio isoladas da UI."
-            ]
+            ],
+            modes: {
+                qa: {
+                    description: "Aplicação Mobile complexa utilizada para estudo de cenários de teste de estado e persistência.",
+                    points: [
+                        "Cobertura de Casos de Borda: Tratamento de conflitos de iniciativa e persistência de dados em interrupções abruptas do app.",
+                        "Testes de Usabilidade: Refinamento de UX baseado em feedback real de usuários (Mestres de RPG) para reduzir cliques.",
+                        "Bug Prevention: Uso de tipagem estrita (Dart) e Imutabilidade para prevenir side-effects indesejados no estado."
+                    ]
+                },
+                fullstack: {
+                    description: "App Mobile robusto seguindo padrões de indústria (Clean Arch) e separação estrita de camadas.",
+                    points: [
+                        "State Management: Uso avançado de Riverpod (Notifier/AsyncNotifier) para gerenciar fluxos assíncronos complexos.",
+                        "Arquitetura Limpa: Domain, Data e Presentation layers totalmente desacopladas.",
+                        "NoSQL Performance: Modelagem de banco orientada a performance mobile com Hive."
+                    ]
+                }
+            }
         },
         {
+            id: "zenith",
             title: "Zenith Prompt Architect",
             tech: ["Python", "Google Gemini API", "Rich CLI", "Design Patterns"],
             date: "Jun 2025",
@@ -65,9 +122,20 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
                 "Arquitetura: Uso de padrões de projeto avançados (Facade para o Orquestrador, Singleton para Config, Strategy para Análise).",
                 "Pipeline de IaC: Implementei protocolos de 'Integridade Semântica' (SIC) e 'Constitutional AI' (The Judge) para auto-correção de outputs.",
                 "Segurança de IP: Desenvolvi um protocolo de 'Secure Fallback' que degrada graciosamente para modo demo se os prompts proprietários não forem detectados."
-            ]
+            ],
+            modes: {
+                qa: {
+                    description: "Framework Python para testes de output de LLMs e validação de prompts.",
+                    points: [
+                        "Automated Evaluation (LLM-as-a-Judge): Criação de agentes que testam e validam as respostas de outros agentes.",
+                        "Cenários de Teste: Validação de outputs contra regras estritas (Constitutional AI) para garantir conformidade.",
+                        "Logs e Auditoria: Sistema de trace detalhado para debugging de cadeias de pensamento (Chain of Thought)."
+                    ]
+                }
+            }
         },
         {
+            id: "runner",
             title: "Runner's Quest",
             tech: ["Python", "Pygame", "Matemática Vetorial"],
             date: "Abr 2025",
@@ -76,7 +144,17 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
                 "Engine de Física: Implementação manual de vetores de gravidade, colisão de sprites e inércia sem uso de frameworks de alto nível.",
                 "Otimização: Técnicas de gerenciamento de memória e renderização de sprites para manter 60 FPS estáveis.",
                 "Game Loop: Estruturação robusta de estados de jogo (Menu, Gameplay, Game Over) demonstrando domínio do ciclo de vida da aplicação."
-            ]
+            ],
+            modes: {
+                qa: {
+                    description: "Laboratório de testes de física e colisão, ideal para prática de identificação de bugs visuais e lógicos.",
+                    points: [
+                        "Testes de Colusão (Hitbox): Ajuste fino de bounding boxes para garantir detecção precisa de impacto.",
+                        "Edge Cases: Validação de comportamento do personagem em limites do mapa e interações de velocidade extrema.",
+                        "Performance Testing: Monitoramento de FPS e uso de memória durante execução prolongada."
+                    ]
+                }
+            }
         }
     ],
     experience: [
@@ -136,4 +214,39 @@ Projetos recentes incluem sistemas de auditoria médica (TISS), ferramentas para
         "Alura: Python: Inteligência Artificial Aplicada (12h)",
         "Alura Flash Skills: Automação de Processos com N8N, Make e IA (5h)"
     ]
+};
+
+export const resumeModes = {
+    general: {
+        id: "general",
+        label: "Geral (Padrão)",
+        summaryKey: "general",
+        projectIds: ["tiss", "combat", "zenith", "runner"],
+        skillKeys: ["ai_rpa", "tech_core", "ferramentas"],
+        roleOverride: null // Use default
+    },
+    fullstack: {
+        id: "fullstack",
+        label: "Dev Full Stack",
+        summaryKey: "fullstack",
+        projectIds: ["combat", "tiss", "runner", "zenith"],
+        skillKeys: ["tech_core", "ferramentas", "ai_rpa"],
+        roleOverride: "Desenvolvedor Full Stack Júnior"
+    },
+    automation: {
+        id: "automation",
+        label: "Automação & IA",
+        summaryKey: "automation",
+        projectIds: ["zenith", "tiss", "runner", "combat"],
+        skillKeys: ["ai_rpa", "tech_core", "ferramentas"],
+        roleOverride: "Analista de Automação & IA"
+    },
+    qa: {
+        id: "qa",
+        label: "QA & Testes",
+        summaryKey: "qa",
+        projectIds: ["tiss", "runner", "combat", "zenith"],
+        skillKeys: ["qa_core", "tech_core", "ferramentas", "ai_rpa"],
+        roleOverride: "Analista de QA / Testes (Júnior)"
+    }
 };

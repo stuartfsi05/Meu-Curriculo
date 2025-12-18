@@ -18,13 +18,26 @@ function SkillGroup({ title, skills }) {
     );
 }
 
+const SECTION_TITLES = {
+    qa_core: "QA, Testes & Metodologias",
+    ai_rpa: "Engenharia de Agentes & RPA",
+    tech_core: "Tech Core & Fundamentos",
+    ferramentas: "Ferramentas & Ambiente"
+};
+
 export default function Skills({ data }) {
     return (
         <Section title="Competências" icon={Code2}>
             <div className="space-y-3">
-                <SkillGroup title="Engenharia de Agentes & RPA" skills={data.ai_rpa} />
-                <SkillGroup title="Tech Core & Fundamentos" skills={data.tech_core} />
-                <SkillGroup title="Ferramentas & Ambiente" skills={data.ferramentas} />
+                {Object.entries(data).map(([key, skills]) => (
+                    skills && (
+                        <SkillGroup
+                            key={key}
+                            title={SECTION_TITLES[key] || key}
+                            skills={skills}
+                        />
+                    )
+                ))}
             </div>
         </Section>
     );
