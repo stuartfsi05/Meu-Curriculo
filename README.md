@@ -8,17 +8,18 @@ Este projeto é a versão digital e interativa do meu currículo, desenvolvida c
 
 ## 🚀 Tecnologias
 
--   **React:** Construção de componentes reutilizáveis e limpos.
--   **Tailwind CSS:** Estilização utilitária para um design responsivo e moderno.
--   **Vite:** Build tool de última geração para alta performance.
--   **Lucide React:** Ícones vetoriais leves e consistentes.
+- **React:** Construção de componentes reutilizáveis e limpos.
+- **Tailwind CSS:** Estilização utilitária para um design responsivo e moderno.
+- **Vite:** Build tool de última geração para alta performance.
+- **Lucide React:** Ícones vetoriais leves e consistentes.
 
 ## 🖨️ Features Especiais
 
 Além da visualização web, este projeto foi altamente otimizado para **Impressão (Print Styles)**:
--   **Layout Híbrido:** Web fluida + PDF A4 paginado.
--   **Proteção contra Cortes:** Algoritmos CSS (`break-inside-avoid`) impedem que blocos de texto sejam cortados entre páginas.
--   **Header Inteligente:** Cabeçalho *full-bleed* na primeira página e margens de segurança nas subsequentes.
+
+- **Layout Híbrido:** Web fluida + PDF A4 paginado.
+- **Proteção contra Cortes:** Algoritmos CSS (`break-inside-avoid`) impedem que blocos de texto sejam cortados entre páginas.
+- **Header Inteligente:** Cabeçalho _full-bleed_ na primeira página e margens de segurança nas subsequentes.
 
 ## 🛠️ Como rodar localmente
 
@@ -37,4 +38,5 @@ npm run dev
 ```
 
 ---
-*Desenvolvido por Thiago Dias Precivalli*
+
+_Desenvolvido por Thiago Dias Precivalli_
