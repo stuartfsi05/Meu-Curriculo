@@ -75,6 +75,72 @@ Familiaridade com rituais Ágeis, escrita de cenários em Gherkin e documentaç�
   ],
   projects: [
     {
+      id: 'custos-cybermod',
+      title: 'Custos CyberMod',
+      tech: ['React', 'TypeScript', 'TailwindCSS', 'Capacitor'],
+      date: 'Jan 2026',
+      description:
+        'Sistema de Gestão de Custos e Precificação para Impressão 3D.',
+      points: [
+        'Dynamic Pricing Engine: Motor de precificação configurável com perfis de venda e custos variáveis dinâmicos.',
+        'Mobile-First UX: Interface otimizada para mobile com busca automática de CEP e formulários reativos.',
+        'Offline-Ready: Arquitetura Local-First para gestão de inventário e custos sem dependência de internet.',
+      ],
+      modes: {
+        qa: {
+          description:
+            'Validação completa de fluxos críticos de precificação e usabilidade mobile.',
+          points: [
+            'Precision Testing: Verificação rigorosa de cálculos de lucro e custos variáveis (precisão decimal).',
+            'Mobile Usability: Testes de responsividade e inputs táteis em diferentes viewports.',
+            'Cross-Platform Build: Validação de builds Android (APK) e Web (PWA).',
+          ],
+        },
+        fullstack: {
+          description:
+            'Aplicação PWA/Mobile complexa com integração nativa e lógica de negócios robusta.',
+          points: [
+            'Complex State Management: Gestão de formulários aninhados e estados globais de configuração.',
+            'Native Integration: Uso de Capacitor para acesso a recursos nativos e geração de build Android.',
+            'Business Logic: Implementação de algoritmos de custeio baseados em geometria e material (Filamento/Resina).',
+          ],
+        },
+      },
+    },
+    {
+      id: 'desktop-planner',
+      title: 'Desktop Planner',
+      tech: ['React', 'TypeScript', 'Electron', 'TailwindCSS'],
+      date: 'Dez 2025',
+      description:
+        'Aplicação Desktop de produtividade focada em organização semanal e mensal.',
+      points: [
+        'Custom Calendar System: Desenvolvimento de motor de calendário personalizado com visualizações de Dia, Semana e Mês.',
+        'Drag & Drop Interface: Implementação de interface intuitiva para reorganização de tarefas e compromissos.',
+        'Local-First Architecture: Persistência de dados local segura garantindo privacidade e funcionamento offline.',
+      ],
+      modes: {
+        qa: {
+          description:
+            'Projeto focado em usabilidade e consistência de interface desktop.',
+          points: [
+            'Cross-Platform Testing: Validação de comportamento em diferentes ambientes desktop (Windows/Linux).',
+            'State Consistency: Testes rigorosos de sincronização de estado entre diferentes visualizações do calendário.',
+            'Performance Profiling: Otimização de renderização para grandes volumes de eventos.',
+          ],
+        },
+        fullstack: {
+          description:
+            'Aplicação Desktop completa utilizando tecnologias web modernas.',
+          points: [
+            'Electron Integration: Integração profunda com APIs nativas do sistema operacional.',
+            'React Re-architecture: Refatoração completa para TypeScript e padrões modernos de hooks.',
+            'UI/UX Polishing: Implementação de design system coeso e responsivo.',
+          ],
+        },
+      },
+    },
+    {
       id: 'tiss',
       title: 'TISS Guard',
       tech: ['React (Vite 5)', 'TypeScript', 'Browser APIs', 'Cryptography'],
@@ -282,7 +348,7 @@ export const resumeModes = {
     id: 'general',
     label: 'Geral (Padrão)',
     summaryKey: 'general',
-    projectIds: ['tiss', 'combat', 'zenith', 'runner'],
+    projectIds: ['custos-cybermod', 'desktop-planner', 'tiss', 'combat', 'zenith'],
     skillKeys: ['ai_rpa', 'tech_core', 'ferramentas'],
     roleOverride: null, // Use default
   },
@@ -290,7 +356,7 @@ export const resumeModes = {
     id: 'fullstack',
     label: 'Dev Full Stack',
     summaryKey: 'fullstack',
-    projectIds: ['combat', 'tiss', 'runner', 'zenith'],
+    projectIds: ['custos-cybermod', 'desktop-planner', 'combat', 'tiss', 'runner'],
     skillKeys: ['tech_core', 'ferramentas', 'ai_rpa'],
     roleOverride: 'Desenvolvedor Full Stack',
   },
@@ -298,7 +364,7 @@ export const resumeModes = {
     id: 'automation',
     label: 'Automação & IA',
     summaryKey: 'automation',
-    projectIds: ['zenith', 'tiss', 'runner', 'combat'],
+    projectIds: ['zenith', 'custos-cybermod', 'tiss', 'desktop-planner', 'runner'],
     skillKeys: ['ai_rpa', 'tech_core', 'ferramentas'],
     roleOverride: 'Analista de Automação & IA',
   },
@@ -306,7 +372,7 @@ export const resumeModes = {
     id: 'qa',
     label: 'QA & Testes',
     summaryKey: 'qa',
-    projectIds: ['tiss', 'runner', 'combat', 'zenith'],
+    projectIds: ['custos-cybermod', 'tiss', 'desktop-planner', 'runner', 'combat'],
     skillKeys: ['qa_core', 'tech_core', 'ferramentas', 'ai_rpa'],
     roleOverride: 'Analista de QA / Testes',
   },
