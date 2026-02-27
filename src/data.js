@@ -208,33 +208,33 @@ Familiaridade com rituais Ágeis, escrita de cenários em Gherkin e documentaç�
     },
     {
       id: 'zenith',
-      title: 'Zenith Prompt Architect',
-      tech: ['Python', 'Gemini API', 'Design Patterns', 'Constitutional AI'],
+      title: 'Zenith Prompt Architect Engine',
+      tech: ['Python 3.10+', 'FastAPI', 'Google Gemini 2.5', 'Supabase (pgvector)'],
       date: 'Jun 2025',
       description:
-        'Framework CLI em Python para Orquestração Modular de Agentes de IA.',
+        'Motor Cognitivo Headless operando via API Restful para fornecer inteligência autônoma como serviço.',
       points: [
-        'Multi-Agent Orchestrator: Arquitetura baseada em Facade Pattern para coordenar pipelines complexos de raciocínio (Analysis -> Validation -> Execution).',
-        "Automated Governance & Guardrails: Implementação de módulo 'The Judge' para auto-correção e 'Semantic Integrity Constraints' (SIC) para garantir alinhamento do output.",
-        "Enterprise Resilience: Protocolo 'Secure Fallback' implementando Circuit Breaker para proteção de Propriedade Intelectual (IP) e disponibilidade contínua.",
+        'Cognitive Routing & Memory: Implementação de Roteador Cognitivo para seleção de estratégias dinâmicas e Memória Estratégica (banco relacional) para personalização contínua do perfil de usuário livre de esquecimento.',
+        "Hybrid RAG & The Judge: Combinação robusta de buscas vetoriais e lexicais para ancoragem de fatos, orquestrada por um agente avaliador (Quality Gate) que bloqueia respostas abaixo de 80% de precisão antes de atingir o cliente.",
+        "Transient Service Architecture: Arquitetura de ciclo de vida curto focada em concorrência, performance assíncrona (FastAPI) e escalabilidade de recursos sobre princípios SOLID e injeção de dependências.",
       ],
       modes: {
         qa: {
           description:
-            'Framework para validação determinística de sistemas de IA generativa (LLMs) e garantia de conformidade.',
+            'Engine otimizada para consistência de respostas e redução a zero de alucinações (AI-Safety).',
           points: [
-            'LLM-as-a-Judge: Implementação de agentes auditores que avaliam semanticamente as respostas geradas, garantindo precisão técnica e segurança.',
-            'Testes de Alinhamento (Guardrails): Verificação automatizada contra injeção de prompts e desvios de persona ("hallucinations").',
-            'Rastreabilidade Cognitiva: Sistema de logs estruturados que permite auditar a "Cadeia de Pensamento" (Chain-of-Thought) da IA passo a passo.',
+            'LLM-as-a-Judge: Implementação de módulo de Qualidade para retenção (Circuit Breaker) e regeneração automática de respostas avaliadas com notas baixas na Cadeia de Pensamento.',
+            'Hybrid Retrieval Grounding: Avaliação do índice Híbrido RAG com métricas de relevância vetorial para garantir respostas embasadas em dados técnicos reais, em vez do modelo generativo.',
+            'Rastreabilidade e Resiliência: Arquiteturização dos endpoints (ex. POST /chat) de forma a facilitar auditorias e logs operacionais extensos do comportamento do Agente.',
           ],
         },
         fullstack: {
           description:
-            'Arquitetura de Backend modular para orquestração de Agentes Inteligentes, focada em extensibilidade.',
+            'Uma robusta arquitetura de microsserviço (Backend-only) utilizando as tecnologias web mais consistentes da atualidade.',
           points: [
-            'Design Patterns: Uso intensivo de padrões GoF (Facade, Strategy, Factory) para criar um núcleo de processamento agnóstico ao modelo de LLM subjacente.',
-            'CLI & Tooling Architecture: Desenvolvimento de interface de linha de comando robusta com gestão de configuração e injeção de dependência.',
-            'API Integration Resilience: Implementação de padrões de resiliência (Retry, Backoff, Circuit Breaker) para lidar com instabilidades de APIs de terceiros.',
+            'FastAPI Concurrency: Design focado em chamadas assíncronas permitindo lidar com múltiplos WebHooks/Requests sem overhead de infraestrutura (Transient Service).',
+            'PostgreSQL & pgvector Integration: Uso estratégico do Supabase para conciliar dados relacionais (Memória de Longo Prazo) e buscas vetoriais (RAG) numa mesma ferramenta unificada.',
+            'GoF Design Patterns: Aplicação pragmática de padrões de projeto (Clean Architecture, SOLID, Injeção de dependência) para desacoplar a LLM (Gemini 2.5 Flash) do Core de Negócios.',
           ],
         },
       },
@@ -323,9 +323,10 @@ Familiaridade com rituais Ágeis, escrita de cenários em Gherkin e documentaç�
       date: 'Fev 2025 - Jul 2027 (Previsão)',
       location: 'São Paulo (EAD)',
       details: [
-        'Extensão Acadêmica: Nanodegree Full Stack Development (Foco prático complementar à graduação).',
-        'Semestre 1 (Fundamentos): Lógica de Programação, Python, Modelagem de Banco de Dados e Soft Skills.',
-        'Semestre 2 (Web & Eng): POO com Python, SQL, Engenharia de Software e Desenvolvimento Web (Flask/MVC/HTML/CSS).',
+        'Extensão Acadêmica: Nanodegree Full Stack Development.',
+        'Semestre 1: Fundamentos de Banco de Dados (Modelagem ER e Normalização), Lógica de Programação (Estruturas de Dados e Refatoração), Práticas de Programação em Python e Soft Skills (Inteligência Emocional e Pensamento Crítico).',
+        'Semestre 2: Desenvolvimento Web (Arquitetura Cliente-Servidor, HTML/CSS/JS/Flask, Padrão MVC), Engenharia de Software (Processos Ágeis e Requisitos), Linguagem SQL (Funções e Restrições) e Orientação a Objetos com Python.',
+        'Semestre 3: DevOps (CI/CD e GitHub), Automação Robótica de Processos (RPA com APIs e Banco de Dados), Desenvolvimento de APIs e Microsserviços (Sistemas Distribuídos e Flask) e Engenharia de Requisitos (Modelagem de Processos de Negócio).',
       ],
     },
   ],
