@@ -21,6 +21,7 @@ function SkillGroup({ title, skills }) {
 }
 
 const SECTION_TITLES = {
+  idiomas: 'Idiomas',
   qa_core: 'QA, Testes & Metodologias',
   ai_rpa: 'Engenharia de Agentes & RPA',
   tech_core: 'Tech Core & Fundamentos',

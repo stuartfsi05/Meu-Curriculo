@@ -6,16 +6,17 @@ import {
   Layers,
   LayoutTemplate,
   Bug,
+  FileText,
 } from 'lucide-react'
 import { resumeData, resumeModes } from './data'
 import Header from './components/Header'
 import Summary from './components/Summary'
 import Skills from './components/Skills'
-import Publications from './components/Publications'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Education from './components/Education'
 import Certifications from './components/Certifications'
+import ATSView from './components/ATSView'
 
 export default function Resume() {
   // Inicializa estado lendo do localStorage ou usa 'general' como default
@@ -93,6 +94,8 @@ export default function Resume() {
         return <Cpu size={16} />
       case 'qa':
         return <Bug size={16} />
+      case 'ats':
+        return <FileText size={16} />
       default:
         return <RefreshCw size={16} />
     }
@@ -134,26 +137,31 @@ export default function Resume() {
       <div
         className={`max-w-4xl mx-auto bg-white shadow-xl sm:rounded-lg overflow-hidden print:shadow-none print:w-full print:max-w-none transition-all duration-300 ease-in-out`}
       >
-        <Header data={filteredData.header} />
+        {currentModeId === 'ats' ? (
+          <ATSView data={filteredData} />
+        ) : (
+          <>
+            <Header data={filteredData.header} />
 
-        <div className="p-8 print:p-6 space-y-6">
-          <Summary text={filteredData.summary} />
-          <Skills data={filteredData.skills} />
-          <Publications publications={filteredData.publications} />
-          <Projects projects={filteredData.projects} />
+            <div className="p-8 print:p-6 space-y-6">
+              <Summary text={filteredData.summary} />
+              <Skills data={filteredData.skills} />
+              <Projects projects={filteredData.projects} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 print:grid-cols-3">
-            <div className="md:col-span-2 print:col-span-2 space-y-6">
-              <Experience jobs={filteredData.experience} />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 print:grid-cols-3">
+                <div className="md:col-span-2 print:col-span-2 space-y-6">
+                  <Experience jobs={filteredData.experience} />
+                </div>
+
+                <div className="md:col-span-1 print:col-span-1 space-y-6">
+                  <Education education={filteredData.education} />
+                </div>
+              </div>
+
+              <Certifications certifications={filteredData.certifications} />
             </div>
-
-            <div className="md:col-span-1 print:col-span-1 space-y-6">
-              <Education education={filteredData.education} />
-            </div>
-          </div>
-
-          <Certifications certifications={filteredData.certifications} />
-        </div>
+          </>
+        )}
       </div>
 
       <div className="text-center mt-8 text-slate-400 text-sm print:hidden">
@@ -171,7 +179,7 @@ export default function Resume() {
       <style>
         {` @media print {
             @page {
-              margin: 20mm 0;
+              margin: 15mm 12mm;
               size: A4;
             }
             @page :first {

@@ -1,5 +1,5 @@
 
-import { MapPin, Phone, Mail, Linkedin, Github } from 'lucide-react'
+import { MapPin, Phone, Mail, Linkedin, Github, BookOpen } from 'lucide-react'
 
 export default function Header({ data }) {
   return (
@@ -51,6 +51,22 @@ export default function Header({ data }) {
                 {data.githubUrl || data.github}
               </span>
             </a>
+            {data.bookUrl && (
+              <a
+                href={data.bookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group"
+              >
+                <BookOpen
+                  size={16}
+                  className="text-white group-hover:scale-110 transition-transform"
+                />
+                <span className="font-semibold text-xs sm:text-sm">
+                  {data.bookLabel || 'O Copiloto Inteligente'}
+                </span>
+              </a>
+            )}
           </div>
         </div>
       </div>
