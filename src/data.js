@@ -36,7 +36,7 @@ export const resumeData = {
       'Automação de Processos',
     ],
     tech_core: [
-      'Python (FastAPI)',
+      'Python (FastAPI / Flask)',
       'React / TypeScript',
       'Node.js',
       'Flutter / Dart (Mobile)',
@@ -45,11 +45,13 @@ export const resumeData = {
     ],
     ferramentas: [
       'Git / GitHub Flow',
-      'REST APIs',
+      'REST APIs & Microsserviços',
       'Supabase (BaaS)',
-      'TailwindCSS',
+      'UML & Modelagem de Sistemas',
       'Clean Architecture / SOLID',
       'Metodologias Ágeis (Scrum)',
+      'DevOps (CI/CD)',
+      'Design Thinking & UX',
     ],
   },
   projects: [
@@ -177,7 +179,7 @@ export const resumeData = {
     {
       company: 'Portfólio Autoral',
       role: 'Desenvolvedor de Software (Autônomo)',
-      date: 'Jan 2025 - Atual',
+      date: 'Jan 2023 - Atual',
       location: 'Remoto',
       points: [
         'Arquitetura e desenvolvimento end-to-end de soluções de software: extensão de auditoria médica (TISS Guard), motor de IA cognitivo (Zenith) e sistema de gestão mobile (Custos CyberMod).',
@@ -209,8 +211,11 @@ export const resumeData = {
       school: 'Faculdade Impacta Tecnologia',
       degree: 'Análise e Desenvolvimento de Sistemas',
       date: 'Fev 2025 - Jul 2027 (Previsão)',
-      location: 'São Paulo (EAD)',
-      details: ['Extensão Acadêmica: Nanodegree Full Stack Development.'],
+      location: 'São Paulo',
+      details: [
+        'Extensão Acadêmica: Nanodegree Full Stack Development.',
+        'Disciplinas-chave: Estrutura de Dados, POO, Desenvolvimento Web (HTML/CSS/JS/Flask), APIs & Microsserviços, Banco de Dados (SQL), Engenharia de Software, DevOps (Git/CI), Análise e Modelagem de Sistemas (UML).',
+      ],
     },
   ],
   certifications: [
